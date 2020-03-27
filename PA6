@@ -1,0 +1,85 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+ 
+ //functions 
+
+double read_double(ifstream& inputfile) {   // reads in a double 
+return 0;}
+
+
+
+ int read_integer(ifstream& infile) {
+ return 0;}  //Reads in an intiger
+ 
+ 
+ 
+  double calculate_sum(double number1, double number2, double number3, double number4, double number5){//adds up 5 numbers
+  return number1 + number2 + number3 + number4 + number5;
+ }
+ 
+ 
+ 
+ double calculate_Avg(double sum, int numbers){  //calculats the Average
+return (sum / numbers);
+}
+
+
+
+ double calculate_deviation(double number, double Avg) {  //calculates the deviation
+return (Avg / number);
+}
+
+
+
+double calculate_variance(double deviation1, double deviation2, double deviation3, double deviation4, double deviation5, int number){
+
+int sum =  (deviation1 * deviation1) + (deviation2 * deviation2) + (deviation3 * deviation3) +  (deviation4 * deviation4) + (deviation5 * deviation5);
+
+return calculate_Avg(sum,number);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+int main(){
+ifstream inputFile;
+ifstream outputFile;
+
+
+inputFile.open("input.dat");
+	if (inputFile.is_open()) {
+		cout << "Successfully opened input file" << endl;
+}
+	else {
+		cout << "Failed to open input file" << endl;
+		exit(-1);
+	}
+	
+outputFile.open("output.dat"); //opens output file 
+	if (outputFile.is_open()) {
+		cout << "Successfully opened output file" << endl;
+}
+	else {
+		cout << "Failed to open output file" << endl;
+		exit(-1);
+	}
+
+
+
+inputFile.open(".txt");
+return 0;
+}
